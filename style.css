@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 50px 20px;
+}
+.product-types {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.product-types .content h3 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: start;
+}
+
+.product-types .content p {
+  font-size: 14px;
+  color: #959595;
+  text-align: center;
+  font-weight: 400;
+}
+
+.container-types {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: start;
+  align-items: start;
+}
+
+.container-types .type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container-types .type .image-type {
+  background-color: #287290;
+  border-radius: 10px;
+  display: flex;
+  width: 51px;
+  height: 51px;
+  padding: 1px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-types .type h4 {
+  font-size: 20px;
+}
+
+.product-type-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.conteiner-image-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.conteiner-image-type .image {
+  aspect-ratio: 1/1; /* Keep it square */
+  background-color: #287290;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(70deg);
+  width: 80%;
+  overflow: hidden;
+}
+
+.conteiner-image-type img {
+  width: 140%; /* Image must be larger to fit the rotated box */
+  height: 140%;
+  object-fit: cover;
+  transform: rotate(-67deg); /* Reverse the image rotation to keep it upright */
+}
+
+@media (min-width: 320px) {
+}
+
+@media (min-width: 480px) {
+}
+
+@media (min-width: 640px) {
+  .product-types {
+    flex-direction: row;
+  }
+
+  .conteiner-image-type .image {
+    border-radius: 100px;
+  }
+  .conteiner-image-type {
+    width: 75%;
+  }
+  .container-types {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-types .content h3 {
+    font-size: 50px;
+  }
+
+  .product-types .content p {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+  .conteiner-image-type {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1280px) {
+}
